@@ -1,0 +1,39 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="com.minda.EscalationMatrix.controller.Escalation" xmlns:f="sap.f" xmlns:layout="sap.ui.layout">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<IconTabBar class="sapUiResponsiveContentPadding">
+							<items>
+								<IconTabFilter text="Escalation" key="info">
+									<ScrollContainer height="100%" width="100%" horizontal="true" vertical="true">
+										<FlexBox direction="Column" renderType="Div" class="sapUiSmallMargin">
+											<PDFViewer height="35rem" showDownloadButton="false" source="/sap/opu/odata/sap/ZMINDA_PDF_DISPLAY_SRV/UploadSet('8A1C4078EE001EDBA1AD03788B1EDA83')/$value">
+												<layoutData>
+													<FlexItemData growFactor="1"/>
+												</layoutData>
+											</PDFViewer>
+										</FlexBox>
+									</ScrollContainer>
+								</IconTabFilter>
+								<IconTabFilter text="Grievances" key="attachments">
+									<ScrollContainer height="100%" width="100%" horizontal="true" vertical="true">
+										<FlexBox direction="Column" renderType="Div" class="sapUiSmallMargin">
+											<PDFViewer height="35rem" showDownloadButton="false" source="/sap/opu/odata/sap/ZMINDA_PDF_DISPLAY_SRV/UploadSet('8A1C4078EE001EEBA1C6FF5E957E02D7')/$value">
+												<layoutData>
+													<FlexItemData growFactor="1"/>
+												</layoutData>
+											</PDFViewer>
+										</FlexBox>
+									</ScrollContainer>
+								</IconTabFilter>
+							</items>
+						</IconTabBar>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
